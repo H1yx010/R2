@@ -3,30 +3,114 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ps4 poops</title>
+<title>R2 Store - PS4 Poops</title>
 <style>
-  html, body { margin:0; padding:0; background:#0b0d10; color:#c8ced8;
-               font:15px/1.45 "Segoe UI", system-ui, sans-serif; }
-  #wrap { padding:16px 18px; }
-  #state { font-size:22px; font-weight:700; margin:0 0 10px; }
-  #out { white-space:pre-wrap; font:12px/1.45 Consolas, monospace;
-         background:#11151b; border:1px solid #1e2732; border-radius:5px;
-         padding:10px 12px; height:calc(100vh - 141px); overflow-y:auto; }
-  .ok { color:#7fd0a0; } .bad { color:#d08a7f; } .warn { color:#d8c07f; }
-  #brand { text-align:center; padding:8px 10px; background:#0e1116;
-           border-bottom:1px solid #1e2732; }
-  #brand img { width:28px; height:28px; margin-right:8px; border-radius:50%;
-               vertical-align:middle; }
-  #brand b { font-size:15px; font-weight:700; letter-spacing:.14em;
-             color:#e6ebf2; vertical-align:middle; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  
+  /* شريط المتجر العلوي الفاخر */
+  .store-header {
+    background: linear-gradient(135deg, #161b22 0%, #0d1117 100%);
+    border-bottom: 2px solid #1f6feb;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+  .store-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .store-brand img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid #58a6ff;
+    object-fit: cover;
+  }
+  .store-title h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #58a6ff;
+    text-transform: uppercase;
+  }
+  .store-title p {
+    margin: 2px 0 0;
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .store-contact {
+    text-align: right;
+    font-size: 12px;
+    color: #c9d1d9;
+    background: rgba(88, 166, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(88, 166, 255, 0.2);
+  }
+  .store-contact span {
+    color: #3fb950;
+    font-weight: 700;
+  }
+
+  /* محتوى الثغرة */
+  #wrap { padding: 16px 18px; }
+  #state { 
+    font-size: 20px; 
+    font-weight: 700; 
+    margin: 0 0 12px; 
+    color: #58a6ff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  #out { 
+    white-space: pre-wrap; 
+    font: 12px/1.45 Consolas, monospace;
+    background: #161b22; 
+    border: 1px solid #30363d; 
+    border-radius: 8px;
+    padding: 12px; 
+    height: calc(100vh - 150px); 
+    overflow-y: auto; 
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.6);
+  }
+  
+  .ok { color: #3fb950; font-weight: bold; } 
+  .bad { color: #f85149; font-weight: bold; } 
+  .warn { color: #d29922; font-weight: bold; }
 </style>
 </head>
 <body>
-<div id="brand"><img src="logo_raw.png" alt="" width="28" height="28"><b>RAW GAME</b></div>
-<div id="wrap">
-  <div id="state">loading poops chain...</div>
-  <div id="out"></div>
-</div>
+
+  <!-- هيدر متجر R2 Store -->
+  <div class="store-header">
+    <div class="store-brand">
+      <img src="logo_raw.png" alt="R2 Store">
+      <div class="store-title">
+        <h1>R2 Store</h1>
+        <p>PS4 Jailbreak & Maintenance</p>
+      </div>
+    </div>
+    <div class="store-contact">
+      <div>صيانة وتطوير الألعاب</div>
+      <span>01099684521</span>
+    </div>
+  </div>
+
+  <!-- واجهة الثغرة -->
+  <div id="wrap">
+    <div id="state">loading poops chain...</div>
+    <div id="out"></div>
+  </div>
+
 <script type="module">import "./chain_poops.js";</script>
 </body>
 </html>
